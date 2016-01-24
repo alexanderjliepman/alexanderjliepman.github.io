@@ -1,63 +1,40 @@
-# nandomoreira.me jekyll theme
+# jekyll-uno
 
-### [Preview](http://nandomoreira.me/nandomoreira-jekyll-theme/)
+Jekyll-Uno - a minimal, responsive theme for Jekyll based on the [Uno](https://github.com/daleanthony/Uno) theme for Ghost.
 
-## Setup
+> :warning:
+  This theme requires ruby and rubygems installed
 
-### In the terminal run the commands
+### Features
 
-```
-$ sudo npm i -g gulp bower browser-sync
-$ sudo gem install bundler
-$ bundle install
-$ npm install
-```
-
-## Using Rake tasks
-
-```
-$ rake post title="TITLE OF THE POST"
-$ rake page name="about.md"
-$ rake category title="Programing"
-$ rake tag title="Jekyll"
-```
-
-## Using Jekyll
-
-### Running the server:
-
-```
-$ jekyll server
-```
-
-Access, [localhost:4000](http://localhost:4000/)
-
-## Using Gulp
-
-### Rum gulp
-
-```
-$ gulp
-```
+* Clean layout
+* Resposive layout
+* Pagination
+* Syntax highlight
+* Social links
 
 ---
 
-## Deploy in Github pages in 2 steps
+### Start in 4 steps
 
-1. Change the variables `GITHUB_REPONAME` and `GITHUB_REPO_BRANCH` in `Rakefile`
-2. Run `rake` or `rake publish` for build and publish on Github
+1. Download or clone repo `git clone git@github.com:joshgerdes/jekyll-uno.git`
+2. Enter the folder: `cd jekyll-uno/`
+3. Install Ruby gems: `bundle install`
+4. Start Jekyll server: `jekyll serve`
+
+Access via: [http://localhost:4000/jekyll-uno](http://localhost:4000/jekyll-uno)
 
 ---
 
-* [Jekyll](http://jekyllrb.com/);
-* [Jekyll Documentation](http://jekyllrb.com/docs/home/);
-* [Como definir URLs curtas no Jekyll](http://nandomoreira.me/urls-curtas-no-jekyll/);
-* [Adicionando Disqus ao seu projeto Jekyll](http://nandomoreira.me/adicionando-disqus-ao-seu-projeto-jekyll/);
+### Demo and Download
+
+[Demo](http://joshgerdes.com/jekyll-uno/)
+[Download](https://github.com/joshgerdes/jekyll-uno/archive/master.zip)
+
+![jekyll-uno - free Jekyll theme](/screenshot.png)
 
 ---
 
 ### Copyright and license
 
 It is under [the MIT license](/LICENSE).
-
-Enjoy! :yum:
