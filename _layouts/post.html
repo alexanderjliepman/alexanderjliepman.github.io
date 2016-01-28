@@ -15,7 +15,7 @@ layout: default
         <footer>
             <div class="row">
               {% for post in site.posts %}
-                {% unless post == page.title %}
+                {% unless page.title == post.title %}
 
                   <article class="{% cycle '6u', '6u$' %} 12u(small)">
                       <header>
