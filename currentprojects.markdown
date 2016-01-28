@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Current Projects
 date: 2015-02-06T14:37:44.000Z
 categories: update
