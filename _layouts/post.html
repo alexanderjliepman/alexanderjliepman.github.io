@@ -14,39 +14,23 @@ layout: default
 
         <footer>
             <div class="row">
-            {% if page.previous %}
+              {% for post in site.posts offset:1 %}
 
-                <article class="{% cycle '6u', '6u$' %} 12u(small) excerpt">
-                    <header>
-                        <h2><a href="{{ page.previous.url }}">{{ page.previous.title }}</a></h2>
-                    </header>
-                    <section>
-                        {{ page.previous.excerpt }}
-                    </section>
-                    <footer>
-                        <ul class="actions">
-                            <li><a href="{{ page.previous.url }}" class="button">Read More</a></li>
-                        </ul>
-                    </footer>
-                </article>
-            {% endif %}
+                  <article class="{% cycle '6u', '6u$' %} 12u(small)">
+                      <header>
+                          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                      </header>
+                      <section>
+                          {{ post.excerpt }}
+                      </section>
+                      <footer>
+                          <ul class="actions">
+                              <li><a href="{{ post.url }}" class="button">Read More</a></li>
+                          </ul>
+                      </footer>
+                  </article>
 
-            {% if page.next %}
-
-                <article class="{% cycle '6u', '6u$' %} 12u(small) excerpt f-right">
-                    <header>
-                        <h2><a href="{{ page.next.url }}">{{ page.next.title }}</a></h2>
-                    </header>
-                    <section>
-                        {{ page.next.excerpt | markdownify }}
-                    </section>
-                    <footer>
-                        <ul class="actions">
-                            <li><a href="{{ page.next.url }}" class="button">Read More</a></li>
-                        </ul>
-                    </footer>
-                </article>
-            {% endif %}
+              {% endfor %}
             </div>
         </footer>
 
