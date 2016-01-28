@@ -14,7 +14,8 @@ layout: default
 
         <footer>
             <div class="row">
-              {% for post in site.posts offset:1 %}
+              {% for post in site.posts %}
+                {% unless post == this.post %}
 
                   <article class="{% cycle '6u', '6u$' %} 12u(small)">
                       <header>
@@ -29,7 +30,7 @@ layout: default
                           </ul>
                       </footer>
                   </article>
-
+                  {% endunless %}
               {% endfor %}
             </div>
         </footer>
