@@ -35,12 +35,14 @@ $on-laptop: 800px
 //     }
 // }
 =media-query($device)
-  @media screen and (max-width: $device)
+  @media screen and (min-width: $device)
     @content
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 
 @import modular-scale/_modular-scale
 @import base
+@import mobile
+@import mobile-pages
 @import layout
 @import pages

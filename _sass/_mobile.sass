@@ -1,0 +1,153 @@
+html
+  width: 100vw
+  height: 100vh
+  overflow-x: hidden
+
+  body
+    width: 100%
+    height: 100%
+    margin: 0
+
+    header
+      height: 100%
+      text-align: center
+      background: url(../img/intro-bg.jpg)
+      background-position: center center
+      background-size: cover
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+
+      h1
+        margin: 0
+        color: $background-color
+
+      section
+        a
+          border-bottom: none
+
+        .share-link
+          transition: all 0.25s ease-in-out
+          margin-right: 1rem
+          &:last-child
+            margin-right: 0
+
+          &:hover
+            transform: scale(1.2)
+            transition: all 0.25s ease-in-out
+            .icon--ei-sc-twitter
+              fill: $brand-color !important
+              transition: all 0.25s ease-in-out
+            .icon--ei-sc-linkedin
+              fill: $brand-color !important
+              transition: all 0.25s ease-in-out
+            .icon--ei-envelope
+              fill: $brand-color !important
+              transition: all 0.25s ease-in-out
+        .social-icon
+          fill: $background-color !important
+        .icon--l
+          width: 80px
+          height: 80px
+
+    nav
+      position: absolute
+      top: 0
+      left: 0
+      display: flex
+      align-items: center
+      text-align: center
+
+      label
+        z-index: 1000
+        width: 105px
+        height: 44px
+        transition: left 0.3s ease-in
+        cursor: pointer
+
+        div
+          color: $background-color
+          font-family: $title-font-family
+          font-size: ms(1)
+          font-weight: 400
+          position: absolute
+          left: 0
+          padding: 0 10px
+          transition: left 0.3s ease-in
+          transition-delay: 0.3s
+          &:hover
+            color: $background-color
+            border-bottom: 2px solid $background-color
+            transition: left 0.3s ease-in
+
+      .menu
+        position: fixed
+        width: 100%
+        height: 100%
+        left: -100%
+        top: 0
+        bottom: 0
+        background-color: rgba(66, 66, 66, 0.9)
+        transition: left 0.3s ease-in
+        display: flex
+        justify-content: flex-start
+
+        span
+          width: 35px
+          height: 3px
+          margin: 1.5rem 1rem
+          background-color: $background-color
+          position: fixed
+          transition: left 0.3s ease-in
+          transition-delay: 0.3s
+
+          transform: translate(0, 0) rotate(45deg)
+          &::after
+            content: ""
+            width: 35px
+            height: 3px
+            margin: 0 -17.5px
+            background-color: $background-color
+            position: fixed
+            transition: left 0.3s ease-in
+            transition-delay: 0.3s
+            transform: translate(0, 0) rotate(90deg)
+
+        .menu-container
+          width: 100%
+          display: flex
+          justify-content: center
+          align-items: center
+          h4
+            font:
+              size: ms(1)
+              weight: 300
+
+            ul
+              list-style: none
+              padding: 0
+
+              li
+                margin: 0
+
+                a
+
+      .page-menu
+        width: 100vw
+        height: 100vh
+
+#sidebartoggler
+  display: none
+
+  &:checked + nav
+    .menu
+      left: 0
+      transition: left 0.3s ease-in
+      transition-delay: 0.4s
+
+    label
+      transition: left 0.3s ease-in
+      div
+        transition: left 0.3s ease-in
+        left: -100%

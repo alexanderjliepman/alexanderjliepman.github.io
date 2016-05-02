@@ -1,19 +1,22 @@
-.content-wrapper
-  display: flex
-  flex-direction: row
-  height: 100%
-  width: 100%
+@include media-query($on-palm)
+  .content-wrapper
+    display: flex
+    flex-direction: row
 
-  .header-side
-    min-width: 40%
+    .page-header
+      min-width: 40%
+      max-width: 40%
+      height: 100vh
+      position: fixed
 
-  .content
-    max-width: 60%
-    padding: 0 5rem
+    .content
+      padding: 0 3rem
+      max-width: 60%
+      right: 0
+      position: absolute
 
-    a
-      color: lighten($text-color, 20%)
-      border-bottom: 2px solid
-      &:hover
-        color: darken($text-color, 20%)
-        border-bottom: 2px solid
+      a
+
+        &:hover
+          color: darken($text-color, 20%)
+          border-bottom: 2px solid
